@@ -19,7 +19,7 @@ public class BookGame {
         boolean check = false;
         while(check == false){
             String resposta = escaneador.nextLine(); 
-            if(resposta == "run for the window"){
+            if(resposta.equalsIgnoreCase("run for the window")){
                 check = true;
                 /* ENDING 1 - BEAR TRAP */
                 System.out.println("\n\nYou quickly get up from the old chair you we're sitting in\n"
@@ -37,7 +37,7 @@ public class BookGame {
                     + "in one clean move.\n"
                     + "\n\nGAME OVER.\n" + "\nYou got ending 1!");     
             }
-            else if(resposta == "grab the knife"){
+            else if(resposta.equalsIgnoreCase("grab the knife")){
                 check = true;
                 /* Proceeds to next paragraph */
                 System.out.println("\n\nHesitantly, you decide to follow the man's instructions\n"
