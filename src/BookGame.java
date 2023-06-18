@@ -20,7 +20,7 @@ public class BookGame {
         /* Asks for user input */
         boolean check1 = false; // Creates a check variable to use as a condition to the while
         boolean proceed1 = false;
-        while(check1 == false){
+        while(check1 == false){ 
             String resposta1 = escaneador.nextLine(); 
             if(resposta1.equalsIgnoreCase("run for the window")){
                 check1 = true;
@@ -105,6 +105,7 @@ public class BookGame {
             }    
 
         }
+        System.out.println("Try again?")
         escaneador.close();
     }
 }
