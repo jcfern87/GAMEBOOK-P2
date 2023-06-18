@@ -105,7 +105,6 @@ public class BookGame {
             }    
 
         }
-        System.out.println("Try again?");
         escaneador.close();
     }
 }
