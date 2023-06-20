@@ -15,7 +15,7 @@ public class BookGame {
         + "hands, and a large knife on the center of the table. It looked old, but had traces of blood.\n"
         + "\nYour body trembles in fear, and you desperatly search for a way out.\n"
         + "You're able to make out what seems to be a window in the distance.\n"
-        + "It looks closed, but frag.\n"
+        + "It looks closed, but fragile.\n"
         + "\n\nType 'grab the knife' to grab it or 'run for the window' to try and escape.");
         /* Asks for user input */
         boolean check1 = false; // Creates a check variable to use as a condition to the while
