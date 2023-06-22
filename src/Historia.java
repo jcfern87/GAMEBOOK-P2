@@ -10,7 +10,7 @@ public class Historia {
         char1.setNome("Derrick");
         char2.setNome("Morris");
         char1.setSaude(50);
-        char2.setSaude(40);
+        char2.setSaude(50);
         // Inicia a história
         System.out.println("CAPÍTULO 1 - A FUGA.\n\n\n");
         System.out.println(
@@ -146,7 +146,7 @@ public class Historia {
                 + "grita, e "+ char1.getNome() +" rapidamente pega a faca que estava na mesa, e esfaqueia\n"
                 + char2.getNome()+ ".\n" +"Ele cai da cadeira no chão na sua frente.");
 
-                char2.perderSaude(30); 
+                char2.perderSaude(40); 
                 
                 System.out.println("Ele o encara por alguns segundos\n"
                 + "enquanto tenta recuperar o fôlego e destrancar a porta. Tudo o que o rapaz vê é neve, então ele\n"

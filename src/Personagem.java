@@ -43,6 +43,9 @@ public class Personagem {
             }
             System.out.println(nome + " ganhou " + x + " pontos de vida.");
         }
+        else{
+            System.out.println(nome + " já está com a saúde cheia.");
+        }
         return saude;    
     }
 
