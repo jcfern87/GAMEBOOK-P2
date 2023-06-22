@@ -97,7 +97,6 @@ public class Historia {
         }
         if(proceed1 == true){
             /* Next paragraph, leading to the next choice */
-            Boolean check2 = false;
             System.out.println("\n\nApós muitas considerações, "+char1.getNome()+" decide não fazer nada\n"
                 + "e espera "+char2.getNome()+" continuar.\n"
                 + "\n'Bom' disse "+ char2.getNome() + ". 'Fico feliz em ver que você permaneceu calmo.'\n\n"
@@ -108,11 +107,14 @@ public class Historia {
                 + "Dali ele puxa uma espécie de bolo de aniversário e o traz para a mesa.\n"
                 + "Havia 5 velas apagadas no topo e parecia feito em casa. Ele estendeu a mão para\n"
                 + "o outro lado da mesa e pega um isqueiro. Quando todas as velas foram acesas, ele\n"
-                + "sorriu.\n"+ "\nEle começou a bater palmas e cantar 'Parabéns para mim', pedindo que "+char1.getNome()+ "fizesse o mesmo.\n"
+                + "sorriu.\n"+ "\nEle começou a bater palmas e cantar 'Parabéns para mim', pedindo que "+char1.getNome()+ "fizesse\n"
+                + "o mesmo.\n"
                 + "\nAs luzes das velas ajudam o rapaz a ver mais da sala, que revelou uma porta de madeira\n"
                 + "à sua esquerda. Não tinha certeza se estava destrancado, mas podia ver a chave na fechadura.\n"
                 + "\n\nDigite 'cantar' para cantar e bater palmas junto com o homem, ou"
-                + "'porta' para tentar correr para a porta.");
+                + " 'porta' para tentar correr para a porta.");
+            Boolean check2 = false;
+            Boolean proceed2 = false;
             while(check2 == false){
                 String resposta2 = escaneador.nextLine(); 
                 if(resposta2.equalsIgnoreCase("cantar")){
@@ -126,30 +128,31 @@ public class Historia {
                     + "\n'Agora vem a piñata!'\n" + "\nEle puxa um machado, e antes que você tivesse qualquer momento\n"
                     + "para reagir, ele o ataca, cortando sua cabeça.\n");
                     char1.perderSaude(25);
-                    System.out.println("\n\nGAME OVER.\n" + "\nVocê consegui o final 2!");
+                    System.out.println("\n\nGAME OVER.\n" + "\nVocê alcançou o final 2!");
                 }
                 else if(resposta2.equalsIgnoreCase("porta")){
                     check2 = true;
-                    /* ENDING 3 - ESCAPE */
-                    System.out.println("\n\nO rapaz fecha os olhos e respira lentamente. Enquanto " + char2.getNome()+" está\n"
-                    + "distraído, " + char1.getNome() +" decide se levantar de repente e enfiar o bolo nele. Ele\n"
-                    + "grita, e "+ char1.getNome() +" rapidamente pega a faca que estava na mesa, e esfaqueia\n"
-                    + char2.getNome()+ ".\n" +"Ele cai da cadeira no chão na sua frente.");
-
-                    char2.perderSaude(30); 
-                    
-                    System.out.println("Ele o encara por alguns segundos\n"
-                    + "enquanto tenta recuperar o fôlego e destrancar a porta. Tudo o que o rapaz vê é neve, então ele\n"
-                    + "leva uma lâmpada da casa, para ajudar a guiar seu caminho.\n");
-                    
+                    proceed2 = true;
                 }
                 else{
                     /* Informs the user that what was inputted is unrecognized, and restarts the dialog choice */
                 System.out.println("Eu não sei como '" + resposta2 + "'.");
                 }
-
             }    
+            if(proceed2 == true){
+                /* CHAPTER CLEAR - ESCAPE */
+                System.out.println("\n\nO rapaz fecha os olhos e respira lentamente. Enquanto " + char2.getNome()+" está\n"
+                + "distraído, " + char1.getNome() +" decide se levantar de repente e enfiar o bolo nele. Ele\n"
+                + "grita, e "+ char1.getNome() +" rapidamente pega a faca que estava na mesa, e esfaqueia\n"
+                + char2.getNome()+ ".\n" +"Ele cai da cadeira no chão na sua frente.");
 
+                char2.perderSaude(30); 
+                
+                System.out.println("Ele o encara por alguns segundos\n"
+                + "enquanto tenta recuperar o fôlego e destrancar a porta. Tudo o que o rapaz vê é neve, então ele\n"
+                + "leva uma lâmpada da casa, para ajudar a guiar seu caminho.\n\n\n");
+                System.out.print("Capítulo 1 finalizado.");
+            }    
         }
         escaneador.close();
     }
