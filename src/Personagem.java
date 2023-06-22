@@ -36,9 +36,14 @@ public class Personagem {
 
     // define o método para ganhar vida
     public int ganharSaude(int x) {
-        saude = saude + x;
-        System.out.println(nome + " ganhou " + x + " pontos de vida.");
-        return saude;
+        if(saude < 50){
+            saude = saude + x;
+            if(saude > 50){
+                saude = 50;
+            }
+            System.out.println(nome + " ganhou " + x + " pontos de vida.");
+        }
+        return saude;    
     }
 
 }
