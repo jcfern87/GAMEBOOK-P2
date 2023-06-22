@@ -28,6 +28,9 @@ public class Personagem {
     public int perderSaude(int x) {
         saude = saude - x;
         System.out.println(nome + " perdeu " + x + " pontos de vida.");
+        if(saude <= 0){
+            System.out.println(getNome()+" perdeu todos os pontos de vida.");
+        }
         return saude;
     }
 
