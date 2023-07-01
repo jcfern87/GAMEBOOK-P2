@@ -15,28 +15,26 @@ public class Personagem {
     public int getSaude() {
         return saude;
     }
-    // define o método para perder vida
-    public int perderSaude(int x) {
-        saude = saude - x;
-        System.out.println(nomechar + " perdeu " + x + " pontos de vida.");
-        if(saude <= 0){
-            System.out.println(getNome()+" perdeu todos os pontos de vida.");
-        }
-        return saude;
-    }
-
-    // define o método para ganhar vida
-    public int ganharSaude(int x) {
-        if(saude < 50){
-            saude = saude + x;
-            if(saude > 50){
-                saude = 50;
+    // define o método para alterar vida
+    public int alterarSaude(int x, int y) {
+        if(x == 1){
+            if(saude < 50){
+                saude = saude + y;
+                if(saude > 50){
+                    saude = 50;
+                }
+                System.out.println(nomechar + " ganhou " + y + " pontos de vida.");
             }
-            System.out.println(nomechar + " ganhou " + x + " pontos de vida.");
-        }
-        else{
-            System.out.println(nomechar + " já está com a saúde cheia.");
-        }
+            else{
+                System.out.println(nomechar + " já está com a saúde cheia.");
+            }}
+        else if(x == 2){
+            saude = saude - y;
+            System.out.println(nomechar + " perdeu " + y + " pontos de vida.");
+            if(saude <= 0){
+                System.out.println(getNome()+" perdeu todos os pontos de vida.");
+            }
+        }     
         return saude;    
     }
 
