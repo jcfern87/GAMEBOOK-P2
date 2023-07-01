@@ -26,8 +26,9 @@ public class Capitulo {
         this.alteracaoEnergia = alteracaoEnergia;
     }
     //Define o(s) personagem(s)
-    public void setPerso(Personagem personagem){
-       this.personagem = personagem;        
+    public Personagem setPerso(String nome, int saude){
+       this.personagem = new Personagem(nome, saude);
+       return personagem;       
     }
     //Cria método para mostrar todas as Strings e altera a energia de um ou mais personagens
     public void mostrar(){
