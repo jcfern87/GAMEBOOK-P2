@@ -5,12 +5,8 @@ public class Historia {
         /* Defines a Scanner variable to receive data from user */
         Scanner escaneador = new Scanner(System.in);
         // Define os personagens e atribui o nome e saúde a ambos
-        Personagem char1 = new Personagem();
-        Personagem char2 = new Personagem();
-        char1.setNome("Derrick");
-        char2.setNome("Morris");
-        char1.setSaude(50);
-        char2.setSaude(50);
+        Personagem char1 = new Personagem("Derrick",50);
+        Personagem char2 = new Personagem("Morris",50);
         // Inicia a história
         System.out.println("CAPÍTULO 1 - A FUGA.\n\n\n");
         System.out.println(
