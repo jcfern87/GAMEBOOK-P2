@@ -161,7 +161,5 @@ public class Historia {
         else{
                 end3.mostrar(char2);
         }
-        
-
     }
 }

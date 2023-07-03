@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class Capitulo {
+    //Cria uma scanner
+    Scanner escane = new Scanner(System.in);
     //Define os atributos String Nome, Texto, Escolha1 e Escolha2
     String nome;
     String texto;
@@ -60,7 +62,6 @@ public class Capitulo {
     e retorna como variável int 1 ou 2*/
     public int escolher(){
         Boolean check = false;
-        Scanner escane = new Scanner(System.in);
         int proceed = 0;
         while(check == false){
             String resposta = escane.nextLine(); 
@@ -76,7 +77,6 @@ public class Capitulo {
                 System.out.println("Eu não sei como '"+ resposta +"'.");
             }            
         }
-        escane.close();
         return proceed;
     }
 }
