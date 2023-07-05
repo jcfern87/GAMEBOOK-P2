@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Capitulo {
@@ -6,10 +7,8 @@ public class Capitulo {
     //Define os atributos String Nome, Texto, Escolha1 e Escolha2
     String nome;
     String texto;
-    String escolha1;
-    String recebe1;
-    String escolha2;
-    String recebe2;
+    ArrayList<String> escolhas;
+    ArrayList<String> recebes;
     String edmessage;
     //Define o atributo Personagem
     Personagem personagem;
@@ -27,13 +26,13 @@ public class Capitulo {
     public void setEdMessage(String edmessage){
         this.edmessage = edmessage;
     }
-    public void setEsc1(String escolha1, String recebe1){
-        this.escolha1 = escolha1;
-        this.recebe1 = recebe1;
+    public void setEsc(ArrayList<String> escolhas, ArrayList<String> recebes){
+        this.escolhas = escolhas;
+        this.recebes = recebes;
     }
-    public void setEsc2(String escolha2, String recebe2){
-        this.escolha2 = escolha2;
-        this.recebe2 = recebe2;
+    public void addEsc(String escolha, String recebe){
+        escolhas.add(escolha);
+        recebes.add(recebe);
     }
     public void setAltEn(int gop, int alteracaoEnergia){
         this.alteracaoEnergia = alteracaoEnergia;
@@ -50,10 +49,9 @@ public class Capitulo {
         System.out.println(texto);
         if(alteracaoEnergia != 0){
             personagem.alterarSaude(gop, alteracaoEnergia);}
-        if(escolha1 != null){
-            System.out.println(escolha1);}
-        if(escolha2 != null){    
-            System.out.println(escolha2);}
+        if(escolhas != null){
+            for(int i = 0; i < escolhas.size(); i++)
+                System.out.println(escolhas.get(i));}
         if(edmessage != null){
             System.out.println(edmessage);
         }    
@@ -65,16 +63,17 @@ public class Capitulo {
         int proceed = 0;
         while(check == false){
             String resposta = escane.nextLine(); 
-            if(resposta.equalsIgnoreCase(recebe1)){
+            if(resposta.equalsIgnoreCase(recebes.get(0))){
+                check = true;
+                proceed = 0;
+            }    
+            else if(resposta.equalsIgnoreCase(recebes.get(1))){
                 check = true;
                 proceed = 1;
-            }    
-            else if(resposta.equalsIgnoreCase(recebe2)){
-                check = true;
-                proceed = 2;
             }
             else{
                 System.out.println("Eu não sei como '"+ resposta +"'.");
+                
             }            
         }
         return proceed;
