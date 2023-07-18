@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Capitulo {
@@ -7,11 +6,12 @@ public class Capitulo {
     //Define os atributos String Nome, Texto, Escolha1 e Escolha2
     String nome;
     String texto;
-    ArrayList<String> escolhas;
-    ArrayList<String> recebes;
+    String opçoes;
+    Escolha[] escolhas;
     String edmessage;
     //Define o atributo Personagem
     Personagem personagem;
+    Personagem alteravida;
     //Define a variável int ateracaoEnergia e a variável ganhar ou perder
     int alteracaoEnergia;
     int gop;
@@ -23,59 +23,62 @@ public class Capitulo {
     public void setTexto(String texto){
         this.texto = texto;
     }
+    public void setOp(String opçoes){
+        this.opçoes = opçoes;
+    }
+    public void setPerde(Personagem alteravida){
+        this.alteravida = alteravida;
+    }
     public void setEdMessage(String edmessage){
         this.edmessage = edmessage;
     }
-    public void setEsc(ArrayList<String> escolhas, ArrayList<String> recebes){
+    public void setEsc(Escolha[] escolhas){
         this.escolhas = escolhas;
-        this.recebes = recebes;
-    }
-    public void addEsc(String escolha, String recebe){
-        escolhas.add(escolha);
-        recebes.add(recebe);
     }
     public void setAltEn(int gop, int alteracaoEnergia){
         this.alteracaoEnergia = alteracaoEnergia;
         this.gop = gop;
     }
+    public void persoVida(){
+        alteravida.alterarSaude(gop, alteracaoEnergia);
+    }
     //Define o(s) personagem(s)
-    public Personagem setPerso(String nome, int saude){
+    public Personagem setChar(String nome, int saude){
        this.personagem = new Personagem(nome, saude);
        return personagem;       
     }
     //Cria método para mostrar todas as Strings e altera a energia de um ou mais personagens
-    public void mostrar(Personagem personagem){
+    public void mostrar(){
         System.out.println(nome);
         System.out.println(texto);
         if(alteracaoEnergia != 0){
-            personagem.alterarSaude(gop, alteracaoEnergia);}
+            persoVida();}
         if(escolhas != null){
-            for(int i = 0; i < escolhas.size(); i++)
-                System.out.println(escolhas.get(i));}
+            System.out.println(opçoes);}
         if(edmessage != null){
             System.out.println(edmessage);
         }    
     }
     /*Cria método que detecta a palavra/frase que o jogador digitou
     e retorna como variável int 1 ou 2*/
-    public int escolher(){
+    public Capitulo escolher(){
+        Capitulo qual = null;
         Boolean check = false;
-        int proceed = 0;
         while(check == false){
             String resposta = escane.nextLine(); 
-            if(resposta.equalsIgnoreCase(recebes.get(0))){
+            if(resposta.equalsIgnoreCase(escolhas[0].texto)){
                 check = true;
-                proceed = 0;
-            }    
-            else if(resposta.equalsIgnoreCase(recebes.get(1))){
+                qual = escolhas[0].próximo;}    
+            else if(resposta.equalsIgnoreCase(escolhas[1].texto)){
                 check = true;
-                proceed = 1;
-            }
-            else{
-                System.out.println("Eu não sei como '"+ resposta +"'.");
-                
-            }            
-        }
-        return proceed;
+                qual = escolhas[1].próximo;}
+            else{System.out.println("Eu não sei como '"+ resposta +"'.");}}
+        return qual;
+    }
+    public void executar(){
+        mostrar();
+        if(escolhas != null){
+            Capitulo x = escolher();
+            x.executar();}
     }
 }
