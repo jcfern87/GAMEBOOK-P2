@@ -1,8 +1,8 @@
 public class Personagem {
 
     // define os atributos vida(string) e saude(int)
-    String nomechar;
-    int saude;
+    private String nomechar;
+    private int saude;
     public Personagem(String nomechar, int saude){
         this.nomechar = nomechar;
         this.saude = saude;

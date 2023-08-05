@@ -1,10 +1,10 @@
 public class Historia {
     public static void main(String[] args) throws Exception {
+        Personagem char1 = new Personagem("Derek",  50);
+        Personagem char2 = new Personagem("Morris", 50);
         // Define o capítulo 1 e seus atributos
-        Capitulo cap1 = new Capitulo("CAPÍTULO 1~~~~~~~~~~~~~~~~~~");
-        Personagem char1 = cap1.setChar("Derek", 50);
-        Personagem char2 = cap1.setChar("Morris", 50);
-        cap1.setTexto("Era uma noite fria e escura. A lua majestosamente reluzia, e as terras embaixo" 
+        Capitulo cap1 = new Capitulo("CAPÍTULO 1~~~~~~~~~~~~~~~~~~",
+            "Era uma noite fria e escura. A lua majestosamente reluzia, e as terras embaixo" 
             + "resplandeciam. Um rapaz\n"
             + "de nome " + char1.getNome()
             + " corria o mais rápido que podia enquanto seus pés afundavam na neve espessa.\n"
@@ -66,15 +66,12 @@ public class Historia {
             +"'Me chamo "+char2.getNome()+", espero que se\n"
             +"sinta em casa.\n\n'"+"Ele fala, enquanto desamarra o braço de "+char1.getNome()+".\n\n"
             +"O rapaz, ainda sentindo dor, olha para o lado, e vê uma janela."
-            +" Escura, mas uma possível saída.\n\n");
-        cap1.setPerde(char1);    
-        cap1.setAltEn(2, 25);    
-        cap1.setOp("\n\n1. Digite 'janela' se quiser tentar fugir pela janela.\n\n"
-        +"2. Digite 'continue sentado' se não quiser tentar nada.\n\n");
+            +" Escura, mas uma possível saída.\n\n",
+            "\n\n1. Digite 'janela' se quiser tentar fugir pela janela.\n\n"
+            +"2. Digite 'continue sentado' se não quiser tentar nada.\n\n",
+            char1, null, 2, 25);     
         //Define o primeiro final
-        Capitulo end1 = new Capitulo("\n\nENDING 1 - ARMADILHA DE URSO~~~~~~~~~~~~~~~~\n\n");
-        end1.setAltEn(2, 25);
-        end1.setTexto(char1.getNome() + " rapidamente se levanta da velha cadeira em que está sentado\n"
+        Capitulo end1 = new Capitulo("\n\nENDING 1 - ARMADILHA DE URSO~~~~~~~~~~~~~~~~\n\n", char1.getNome() + " rapidamente se levanta da velha cadeira em que está sentado\n"
                 + "e corre para a janela que viu. Era feita de vidro, mas estava tão escuro lá fora que\n"
                 + "não pôde ver nada através dele. No entanto, ele o quebra e pula,\n"
                 + "achando que o velho não seria capaz de persegui-lo. Estava certo.\n "
@@ -87,12 +84,12 @@ public class Historia {
                 + "naquele mesmo pé. Uma armadilha para ursos. E "+char1.getNome()+ " foi pego nela.\n"
                 + "E antes mesmo de abri-lo, ele sente um par de mãos envolvendo\n"
                 + "seu pescoço, um deles segurando a mesma faca que viu na mesa, e então,\n"
-                + "em um movimento limpo, sua garganta é cortada.\n\n\n");
-        end1.setPerde(char1);        
-        end1.setEdMessage("FIM DE JOGO.\n\n" + "Você conseguiu o final 1!");
+                + "em um movimento limpo, sua garganta é cortada.\n\n\n",
+                null, char1, "FIM DE JOGO.\n\n" + "Você conseguiu o final 1!",
+                2, 25);
         //Define o cap2 e seus atributos        
-        Capitulo cap2 = new Capitulo("CAPÍTULO 2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        cap2.setTexto("\n\nApós muitas considerações, "+char1.getNome()+" decide não fazer nada\n"
+        Capitulo cap2 = new Capitulo("CAPÍTULO 2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+                "\n\nApós muitas considerações, "+char1.getNome()+" decide não fazer nada\n"
                 + "e espera "+char2.getNome()+" continuar.\n"
                 + "\n'Bom' disse "+ char2.getNome() + ". 'Fico feliz em ver que você permaneceu calmo.'\n\n"
                 + "'Não recebo muitas visitas, então foi uma surpresa ver você inconsciente em"
@@ -107,14 +104,13 @@ public class Historia {
                 + "\nAs luzes das velas ajudam o rapaz a ver mais da sala,"
                 +" que revelou uma porta de madeira\n"
                 + "à sua esquerda. Não tinha certeza se estava destrancado,"
-                +" mas podia ver a chave na fechadura.\n\n\n");
-        cap2.setAltEn(0, 0);
-        cap2.setOp("1. Digite 'cantar' para cantar e bater palmas junto com o homem.\n\n"
-         + "2. Digite 'porta' para tentar correr para a porta.");
+                +" mas podia ver a chave na fechadura.\n\n\n",
+                "1. Digite 'cantar' para cantar e bater palmas junto com o homem.\n\n"
+                + "2. Digite 'porta' para tentar correr para a porta.",
+                null, null, 0, 0);
         //Define o final 2
-        Capitulo end2 = new Capitulo("ENDING 2 - MACHADO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        end2.setAltEn(2, 25);
-        end2.setTexto("\n\nO homem engole em seco e junta toda a sua coragem para"
+        Capitulo end2 = new Capitulo("ENDING 2 - MACHADO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+        "\n\nO homem engole em seco e junta toda a sua coragem para"
                 +"começar a bater palmas em sincronia com o velho. Ele parece mais"
                 +" feliz agora, vendo que\n"
                 + "ambos estão comemorando juntos. Lágrimas escorrem lentamente por seu rosto,"
@@ -123,12 +119,10 @@ public class Historia {
                 + "'E agora...', ele diz enquanto puxa algo debaixo da mesa.\n"
                 + "\n'Agora vem a piñata!'\n" + "\nEle puxa um machado, e antes que"
                 +" você tivesse qualquer momento\n"
-                + "para reagir, ele o ataca, cortando sua cabeça.\n\n\n");
-        end2.setPerde(char1);
-                end2.setEdMessage("FIM DE JOGO.\n\n" + "Você conseguiu o final 2!");
-        Capitulo end3 = new Capitulo("ENDING 3 - VITÓRIA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        end3.setAltEn(2, 40);
-        end3.setTexto("\n\nO rapaz fecha os olhos e respira lentamente. Enquanto " + char2.getNome()
+                + "para reagir, ele o ataca, cortando sua cabeça.\n\n\n", null, char1,
+                "FIM DE JOGO.\n\n" + "Você conseguiu o final 2!", 2, 25);
+        Capitulo end3 = new Capitulo("ENDING 3 - VITÓRIA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+        "\n\nO rapaz fecha os olhos e respira lentamente. Enquanto " + char2.getNome()
                 +" está\n"
                 + "distraído, " + char1.getNome() +" decide se levantar de repente"
                 +" e enfiar o bolo nele. Ele\n"
@@ -139,18 +133,14 @@ public class Historia {
                 + "Ele o encara por alguns segundos\n"
                 + "enquanto tenta recuperar o fôlego e destrancar a porta."
                 +" Tudo o que o rapaz vê é neve, então ele\n"
-                + "leva uma lâmpada da casa, para ajudar a guiar seu caminho.\n\n\n");
-        end3.setPerde(char2);        
-        end3.setEdMessage("FIM DE JOGO.\n\n" + "Você conseguiu o final 3(verdadeiro)!");
+                + "leva uma lâmpada da casa, para ajudar a guiar seu caminho.\n\n\n", null, char2,
+                "FIM DE JOGO.\n\n" + "Você conseguiu o final 3(verdadeiro)!", 2, 40);
         //Define as escolhas de cada capítulo e o capítulo que segue após cada escolha
-        cap1.escolhas = new Escolha[]{new Escolha("janela", end1),
-         new Escolha("continue sentado", cap2)};
-        cap2.escolhas = new Escolha[]{new Escolha("cantar", end2),
-         new Escolha("porta", end3)};
+        cap1.setEsc("janela", end1, "continue sentado", cap2);
+        cap2.setEsc("cantar", end2, "porta", end3); 
         //Define o capítulo raiz(primeiro capítulo)
         Capitulo raiz = cap1;
         //Inicia a história e organiza os capítulos
         raiz.executar();
     }
 }
-
