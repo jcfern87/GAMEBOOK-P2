@@ -1,7 +1,12 @@
+import java.util.HashMap;
+
 public class Historia {
     public static void main(String[] args) throws Exception {
-        Personagem char1 = new Personagem("Derek",  50);
-        Personagem char2 = new Personagem("Morris", 50);
+
+        Leitor leitor = new Leitor();
+        HashMap<String, Personagem> personagens = leitor.lerPerso("rsc/personagens.txt");
+        Personagem char1 = personagens.get("Derek");
+        Personagem char2 = personagens.get("Morris");
         // Define o capítulo 1 e seus atributos
         Capitulo cap1 = new Capitulo("CAPÍTULO 1~~~~~~~~~~~~~~~~~~",
             "Era uma noite fria e escura. A lua majestosamente reluzia, e as terras embaixo" 
@@ -71,7 +76,8 @@ public class Historia {
             +"2. Digite 'continue sentado' se não quiser tentar nada.\n\n",
             char1, null, 2, 25);     
         //Define o primeiro final
-        Capitulo end1 = new Capitulo("\n\nENDING 1 - ARMADILHA DE URSO~~~~~~~~~~~~~~~~\n\n", char1.getNome() + " rapidamente se levanta da velha cadeira em que está sentado\n"
+        Capitulo end1 = new Capitulo("\n\nENDING 1 - ARMADILHA DE URSO~~~~~~~~~~~~~~~~\n\n",
+                char1.getNome() + " rapidamente se levanta da velha cadeira em que está sentado\n"
                 + "e corre para a janela que viu. Era feita de vidro, mas estava tão escuro lá fora que\n"
                 + "não pôde ver nada através dele. No entanto, ele o quebra e pula,\n"
                 + "achando que o velho não seria capaz de persegui-lo. Estava certo.\n "

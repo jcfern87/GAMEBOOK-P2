@@ -1,0 +1,14 @@
+PERSONAGEM 
+NOME: 
+Derek
+VIDA:
+50
+
+PERSONAGEM
+NOME:
+Morris
+VIDA:
+50
+
+Personagem char1 = new Personagem("Derek",  50);
+Personagem char2 = new Personagem("Morris", 50);
