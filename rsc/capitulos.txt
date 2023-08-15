@@ -1,14 +1,103 @@
-PERSONAGEM 
+CAPITULO
 NOME: 
+CAPÍTULO 1~~~~~~~~~~~~~~~~~~
+TEXTO:
+Era uma noite fria e escura. A lua majestosamente reluzia, e as terras embaixo resplandeciam. Um rapaz/n de nome Derek corria o mais rápido que podia enquanto seus pés afundavam na neve espessa./nEle usava uma roupa alaranjada, e não tinha quaisquer tipo de calçados. Sua respiração estava ofegante./n/nDerek: 'Tenho que fugir, tenho que fugir...'/n/nRepetidamente dizia isso para si mesmo. Não muito longe dali ecoavam sirenes, e podia se ver luzes./nVindo de grandes holofotes, as luzes procuravam por algo, e inúmeros indivíduos de roupa azul escuro corriam com lanternas./nEra uma prisão, e nosso protagonista havia fugido./n/nApós certo tempo correndo como se não houvesse amanhã, o rapaz eventualmente chega em uma floresta escura, repleta/n de árvores que dificultavam o uso de holofotes. Antes de conseguir se apoiar em um tronco, o homem/n desmaia, e cai de cara na neve fofa. Antes de apagar, ele consegue ver as pernas de alguém, parecia um lenhador./n/n~ QUEBRA DE TEMPO ~/n/nEnquanto lentamente recompõe os sentidos, Derek sente um pequeno calor na sua frente. Um tipo de calor confortante./nAo abrir os olhos, Derek percebe que é uma vela. Uma vela que foi recentemente acendida./nUma voz ressoa a sala escura, pois a vela era a única fonte de luz./n/n???: 'Finalmente acordou.'/n/nÉ uma voz áspera, certamente vinda de um velho./n/n???:'Não tinha certeza de se estava vivo, então te trouxe aqui.'/n/nSua aparência era assustadora. Sua boca tinha todos os dentes à mostra, mas nenhum parecia real./nSuas pupilas pareciam as de um gato, e sua pele era enrugada, quase esquelética./n/nVelho: 'Eu ouvi barulhos vindo do oeste, não muito longe daqui. Um prisioneiro deve ter escapado da penitenciária.'/n/nA sua dicção era quase perfeita./n/nVelho: 'Quem é você?'/n/nO homem pondera por uns momentos sobre se deveria revelar sua identidade para o velho que/n'lhe-resgatou' ou se finge ser outro alguém. Eventualmente decide mentir./n/n'Sou um viajante que estava passando,/nacabei me perdendo da trilha e desmaiei por conta da sede.'/n/nO idoso não demonstra nenhuma mudança de humor, e apenas continua julgando o rapaz, silenciosamente./n/nSubitamente, o velho pega um garfo que estava na mesa em que ambos estavam sentados e o usa para perfurar o braço de Derek./nEle agoniza e grita por alguns segundos, e tenta colocar a mão na/nregião perfurada, mas não consegue pois seu outro braço está amarrado no braço da cadeira. Sentia muita dor. 'Dói, não é? Não gosto de mentirosos./n/nO velho diz. Em seguida, ele coloca a mão no mesmo garfo, e começa a/n mexê-lo, provocando ainda mais dor./n/nDerek começa a gemer entre dentes, com o corpo tremendo./n/n'Diga. O. Seu. Nome.'/n/nDerek decide dizer que era um fugitivo./n/nO velho sorri./n'Finalmente, um pouco de honestidade.'/n/nEle retira o garfo do braço de Derek e o coloca de volta na mesa,/njunto com um prato e uma faca também ensaguentada./n/n'Não tem problema nenhum em ser um fugitivo, todos/n nós fizemos algo de errado alguma vez.'/n/nO velho sorri novamente./n'Me chamo Morris, espero que se/nsinta em casa./n/n'Ele fala, enquanto desamarra o braço de Derek./n/nO rapaz, ainda sentindo dor, olha para o lado, e vê uma janela. Escura, mas uma possível saída./n/n
+OPÇOES:
+\n\n1. Digite 'janela' se quiser tentar fugir pela janela.\n\n2. Digite 'continue sentado' se não quiser tentar nada.\n\n
+PERSONAGEM:
 Derek
-VIDA:
-50
-
-PERSONAGEM
-NOME:
+EDMESSAGE:
+null
+ALTERA ENERGIA:
+25
+GANHA OU PERDE:
+2
+CAPITULO
+NOME: 
+\n\nENDING 1 - ARMADILHA DE URSO~~~~~~~~~~~~~~~~\n\n
+TEXTO:
+Derek rapidamente se levanta da velha cadeira em que está sentado\ne corre para a janela que viu. Era feita de vidro, mas estava tão escuro lá fora que\nnão pôde ver nada através dele. No entanto, ele o quebra e pula,\nachando que o velho não seria capaz de persegui-lo. Estava certo.\n\nNo entanto, o alívio durou pouco.\nAssim que ele sai, sente a maciez da neve no pé direito. Uma sensação\nque definitivamente já teve antes, mas algo estava errado.\nQuando o pé esquerdo toca o chão, ele sente uma superfície dura, algo semelhante a metal.\nNo entanto, não percebe, pois no mesmo segundo você sente uma dor incrível\nnaquele mesmo pé. Uma armadilha para ursos. E Derek foi pego nela.\nE antes mesmo de abri-lo, ele sente um par de mãos envolvendo\nseu pescoço, um deles segurando a mesma faca que viu na mesa, e então,\nem um movimento limpo, sua garganta é cortada.\n\n\n
+OPÇOES:
+null
+PERSONAGEM:
+Derek
+EDMESSAGE:
+FIM DE JOGO.\n\nVocê conseguiu o final 1!
+ALTERA ENERGIA:
+25
+GANHA OU PERDE:
+2
+CAPITULO
+NOME: 
+CAPÍTULO 2~~~~~~~~~~~~~~~~~~
+TEXTO:
+\n\nApós muitas considerações, Derek decide não fazer nada\ne espera Morris continuar.\n\n'Bom', disse o velho. 'Fico feliz em ver que você permaneceu calmo.'\n\n'Não recebo muitas visitas, então foi uma surpresa ver você inconsciente na floresta assim.'\n\n'Isso me deixou muito feliz.'\n\nEle então se levanta e caminha até o que parecia ser uma geladeira, mas não tinha\npotência e não acendeu, então era mais parecido com uma prateleira cara.\nDali ele puxa uma espécie de bolo de aniversário e o traz para a mesa.\nHavia 5 velas apagadas no topo e parecia feito em casa. Ele estendeu a mão para\no outro lado da mesa e pega um isqueiro. Quando todas as velas foram acesas, ele\nsorriu.\n\nEle começou a bater palmas e cantar 'Parabéns para mim', pedindo que Derek fizesse o mesmo.\n\nAs luzes das velas ajudam o rapaz a ver mais da sala, que revelou uma porta de madeira\nà sua esquerda. Não tinha certeza se estava destrancado, mas podia ver a chave na fechadura.\n\n\n
+OPÇOES:
+1. Digite 'cantar' para cantar e bater palmas junto com o homem.\n\n2. Digite 'porta' para tentar correr para a porta.
+PERSONAGEM:
+Derek
+EDMESSAGE:
+null
+ALTERA ENERGIA:
+0
+GANHA OU PERDE:
+0
+CAPITULO
+NOME: 
+ENDING 2 - MACHADO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TEXTO:
+\n\nO homem engole em seco e junta toda a sua coragem para começar a bater palmas em sincronia com o velho. Ele parece mais feliz agora, vendo que\nambos estão comemorando juntos. Lágrimas escorrem lentamente por seu rosto, mostrando pura alegria.\nEle começa a rir enquanto bate palmas. 'Isso foi ótimo!'\n'E agora...', ele diz enquanto puxa algo debaixo da mesa.\n\n'Agora vem a piñata!'\n\nEle puxa um machado, e antes que você tivesse qualquer momento\npara reagir, ele o ataca, cortando sua cabeça.\n\n\n
+OPÇOES:
+null
+PERSONAGEM:
+Derek
+EDMESSAGE:
+FIM DE JOGO.\n\nVocê conseguiu o final 2!
+ALTERA ENERGIA:
+25
+GANHA OU PERDE:
+2
+CAPITULO
+NOME: 
+ENDING 3 - VITÓRIA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TEXTO:
+\n\nO rapaz fecha os olhos e respira lentamente. Enquanto Morris está\ndistraído, Derek decide se levantar de repente e jogar o bolo nele. O velho\ngrita, e Derek rapidamente pega a faca que estava na mesa, e esfaqueia Morris.\n\nEle cai da cadeira no chão na sua frente. Ele o encara por alguns segundos\nenquanto tenta recuperar o fôlego e destrancar a porta. Tudo o que o rapaz vê é neve, então ele\nleva uma lamparina da casa, para ajudar a guiar seu caminho.\n\n\n
+OPÇOES:
+null
+PERSONAGEM:
 Morris
-VIDA:
-50
-
-Personagem char1 = new Personagem("Derek",  50);
-Personagem char2 = new Personagem("Morris", 50);
+EDMESSAGE:
+FIM DE JOGO.\n\nVocê conseguiu o final 3(verdadeiro)!
+ALTERA ENERGIA:
+40
+GANHA OU PERDE:
+2
+ESCOLHA
+ORIGEM:
+CAPÍTULO 1~~~~~~~~~~~~~~~~~~
+TEXTO:
+continue sentado
+PRÓXIMO:
+CAPÍTULO 2~~~~~~~~~~~~~~~~~~
+ESCOLHA
+ORIGEM:
+CAPÍTULO 1~~~~~~~~~~~~~~~~~~
+TEXTO:
+janela
+PRÓXIMO:
+\n\nENDING 1 - ARMADILHA DE URSO~~~~~~~~~~~~~~~~\n\n
+ESCOLHA
+ORIGEM:
+CAPÍTULO 2~~~~~~~~~~~~~~~~~~
+TEXTO:
+cantar
+PRÓXIMO:
+ENDING 2 - MACHADO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ESCOLHA
+ORIGEM:
+CAPÍTULO 2~~~~~~~~~~~~~~~~~~
+TEXTO:
+porta
+PRÓXIMO:
+ENDING 3 - VITÓRIA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

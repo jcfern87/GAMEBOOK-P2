@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Capitulo {
@@ -7,13 +8,13 @@ public class Capitulo {
     private String nome;
     private String texto;
     private String opçoes;
-    private Escolha[] escolhas;
+    private ArrayList<Escolha> escolhas;
     private String edmessage;
     private Personagem alteravida;//Usado para indicar qual personagem terá a vida alterada em cada capt.
     //Define a variável int ateracaoEnergia e a variável ganhar ou perder
     private int alteracaoEnergia;
     private int gop;
-    //Define o capitulo e t
+    //Define o capitulo e todos os atributos
     public Capitulo(String nome, String texto, String opçoes, Personagem alteravida, String edmessage,
      int gop, int alteracaoEnergia){
         this.nome = nome;
@@ -25,13 +26,17 @@ public class Capitulo {
         this.alteracaoEnergia = alteracaoEnergia;
 
     }
-    public void setEsc(String texto1, Capitulo proximo1, String texto2, Capitulo proximo2){
-        escolhas = new Escolha[]{new Escolha(texto1, proximo1),
-         new Escolha(texto2, proximo2)};
-    //Escolhas são definidas depois pois dependem de que todos os caps e finais estejam definidos     
+    public void setEsc()
+    {
+        escolhas = new ArrayList<>();  
+    }
+    public ArrayList<Escolha> getEsc()
+    {
+        return escolhas; 
     }
     //Método que altera a vida de um personagem
-    private void persoVida(){
+    private void persoVida()
+    {
         alteravida.alterarSaude(gop, alteracaoEnergia);
     }
     //Cria método para mostrar todas as Strings e altera a energia de um ou mais personagens
@@ -39,9 +44,11 @@ public class Capitulo {
         System.out.println(nome);
         System.out.println(texto);
         if(alteracaoEnergia != 0){
-            persoVida();}
-        if(escolhas != null){
-            System.out.println(opçoes);}
+            persoVida();
+        }
+        if(opçoes != null){
+            System.out.println(opçoes);
+        }
         if(edmessage != null){
             System.out.println(edmessage);
         }    
@@ -53,19 +60,19 @@ public class Capitulo {
         Boolean check = false;
         while(check == false){
             String resposta = escane.nextLine(); 
-            if(resposta.equalsIgnoreCase(escolhas[0].getTextoEsc())){
+            if(resposta.equalsIgnoreCase(escolhas.get(0).getTextoEsc())){
                 check = true;
-                qual = escolhas[0].getProximoEsc();}    
-            else if(resposta.equalsIgnoreCase(escolhas[1].getTextoEsc())){
+                qual = escolhas.get(0).getProximoEsc();}    
+            else if(resposta.equalsIgnoreCase(escolhas.get(1).getTextoEsc())){
                 check = true;
-                qual = escolhas[1].getProximoEsc();}
+                qual = escolhas.get(1).getProximoEsc();}
             else{System.out.println("Eu não sei como '"+ resposta +"'.");}}
         return qual;
     }
     //Método principal que executa o código
     public void executar(){
         mostrar();
-        if(escolhas != null){
+        if(opçoes != null){
             Capitulo x = escolher();
             x.executar();}
     }
