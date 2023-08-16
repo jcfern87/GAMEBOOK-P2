@@ -41,16 +41,22 @@ public class Capitulo {
     }
     //Cria método para mostrar todas as Strings e altera a energia de um ou mais personagens
     private void mostrar(){
+        System.out.println();
         System.out.println(nome);
+        System.out.println();
         System.out.println(texto);
+        System.out.println();
         if(alteracaoEnergia != 0){
             persoVida();
+            System.out.println();
         }
         if(opçoes != null){
             System.out.println(opçoes);
+            System.out.println();
         }
         if(edmessage != null){
             System.out.println(edmessage);
+            System.out.println();
         }    
     }
     /*Cria método que detecta a palavra/frase que o jogador digitou
