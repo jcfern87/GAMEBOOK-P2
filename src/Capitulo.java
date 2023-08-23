@@ -3,17 +3,17 @@ import java.util.Scanner;
 
 public class Capitulo {
     //Cria uma scanner
-    private Scanner escane = new Scanner(System.in);
+    protected Scanner escane = new Scanner(System.in);
     //Define os atributos String Nome, Texto, Opções, Array de Escolhas e String edmessage
-    private String nome;
-    private String texto;
-    private String opçoes;
-    private ArrayList<Escolha> escolhas;
-    private String edmessage;
-    private Personagem alteravida;//Usado para indicar qual personagem terá a vida alterada em cada capt.
+    protected String nome;
+    protected String texto;
+    protected String opçoes;
+    protected ArrayList<Escolha> escolhas;
+    protected String edmessage;
+    protected Personagem alteravida;//Usado para indicar qual personagem terá a vida alterada em cada capt.
     //Define a variável int ateracaoEnergia e a variável ganhar ou perder
-    private int alteracaoEnergia;
-    private int gop;
+    protected int alteracaoEnergia;
+    protected int gop;
     //Define o capitulo e todos os atributos
     public Capitulo(String nome, String texto, String opçoes, Personagem alteravida, String edmessage,
      int gop, int alteracaoEnergia){
@@ -40,7 +40,7 @@ public class Capitulo {
         alteravida.alterarSaude(gop, alteracaoEnergia);
     }
     //Cria método para mostrar todas as Strings e altera a energia de um ou mais personagens
-    private void mostrar(){
+    protected void mostrar(){
         System.out.println();
         System.out.println(nome);
         System.out.println();

@@ -4,6 +4,19 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class Leitor {
+    private String lerImg(Scanner escaneadorArquivoCapitulos)
+    {
+                String imagem = "";
+                String linha = escaneadorArquivoCapitulos.nextLine();
+                while(!linha.equals("IMG_END")){
+                    linha = escaneadorArquivoCapitulos.nextLine();
+                    if(!linha.equals("IMG_END")){
+                        linha += "\n";
+                        imagem += linha;
+                    } 
+                }
+                return imagem;
+    }
     HashMap<String, Personagem> lerPerso(String caminhoArquivoPersonagens){
         HashMap<String, Personagem> personagens = new HashMap<String, Personagem>();
         File arquivoPersonagens = new File(caminhoArquivoPersonagens);
@@ -63,6 +76,35 @@ public class Leitor {
                         opçoesCapitulo = null;
                     }
                     capitulos.put(nomeCapitulo, new Capitulo(nomeCapitulo, textoCapitulo, opçoesCapitulo, 
+                       personagens.get(personagemCapitulo), edMessageCapitulo, gopCapitulo, alteraEnergiaCapitulo));
+                    capitulos.get(nomeCapitulo).setEsc();
+                }
+                if(linhaEscaneada.equals("CAPITULO_IMAGEM"))
+                {
+                    String imagemCapitulo = lerImg(escaneadorArquivoCapitulos);
+                    linhaEscaneada = escaneadorArquivoCapitulos.nextLine();//NOME
+                    String nomeCapitulo = escaneadorArquivoCapitulos.nextLine();
+                    linhaEscaneada = escaneadorArquivoCapitulos.nextLine();//TEXTO
+                    String textoCapitulo = escaneadorArquivoCapitulos.nextLine();
+                    linhaEscaneada = escaneadorArquivoCapitulos.nextLine();//OPÇOES
+                    String opçoesCapitulo = escaneadorArquivoCapitulos.nextLine();
+                    linhaEscaneada = escaneadorArquivoCapitulos.nextLine();//PERSONAGEM
+                    String personagemCapitulo = escaneadorArquivoCapitulos.nextLine();
+                    linhaEscaneada = escaneadorArquivoCapitulos.nextLine();//EDMESSAGE
+                    String edMessageCapitulo = escaneadorArquivoCapitulos.nextLine();
+                    linhaEscaneada = escaneadorArquivoCapitulos.nextLine();//ALTERA ENERGIA
+                    int alteraEnergiaCapitulo = Integer.parseInt(escaneadorArquivoCapitulos.nextLine());
+                    linhaEscaneada = escaneadorArquivoCapitulos.nextLine();//GANHA OU PERDE
+                    int gopCapitulo = Integer.parseInt(escaneadorArquivoCapitulos.nextLine());
+                    if(edMessageCapitulo.equals("null"))
+                    {
+                        edMessageCapitulo = null;
+                    }
+                    if(opçoesCapitulo.equals("null"))
+                    {
+                        opçoesCapitulo = null;
+                    }
+                    capitulos.put(nomeCapitulo, new CapituloImagem(imagemCapitulo, nomeCapitulo, textoCapitulo, opçoesCapitulo, 
                        personagens.get(personagemCapitulo), edMessageCapitulo, gopCapitulo, alteraEnergiaCapitulo));
                     capitulos.get(nomeCapitulo).setEsc();     
                 }
