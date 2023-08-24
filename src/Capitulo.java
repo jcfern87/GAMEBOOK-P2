@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Capitulo {
@@ -14,8 +15,39 @@ public class Capitulo {
     //Define a variável int ateracaoEnergia e a variável ganhar ou perder
     protected int alteracaoEnergia;
     protected int gop;
+    public Capitulo(HashMap<String, Capitulo> capitulos,
+     HashMap<String, Personagem> personagens, Scanner escaneadorArquivoCapitulos)
+     {
+        escaneadorArquivoCapitulos.nextLine(); //NOME
+        String nomeCapitulo = escaneadorArquivoCapitulos.nextLine();
+        escaneadorArquivoCapitulos.nextLine();//TEXTO
+        String textoCapitulo = escaneadorArquivoCapitulos.nextLine();
+        escaneadorArquivoCapitulos.nextLine();//OPÇOES
+        String opçoesCapitulo = escaneadorArquivoCapitulos.nextLine();
+        escaneadorArquivoCapitulos.nextLine();//PERSONAGEM
+        String personagemCapitulo = escaneadorArquivoCapitulos.nextLine();
+        escaneadorArquivoCapitulos.nextLine();//EDMESSAGE
+        String edMessageCapitulo = escaneadorArquivoCapitulos.nextLine();
+        escaneadorArquivoCapitulos.nextLine();//ALTERA ENERGIA 
+        int alteraEnergiaCapitulo = Integer.parseInt(escaneadorArquivoCapitulos.nextLine());
+        escaneadorArquivoCapitulos.nextLine();//GANHA OU PERDE
+        int gopCapitulo = Integer.parseInt(escaneadorArquivoCapitulos.nextLine());
+        if(edMessageCapitulo.equals("null"))
+        {
+            edMessageCapitulo = null;
+        }
+        if(opçoesCapitulo.equals("null"))
+        {
+            opçoesCapitulo = null;
+        }
+        setCapitulo(nomeCapitulo, textoCapitulo, opçoesCapitulo, personagens.get(personagemCapitulo),
+                    edMessageCapitulo, alteraEnergiaCapitulo, gopCapitulo);
+    }
+    public String getCapitulo(){
+        return this.nome;
+    }
     //Define o capitulo e todos os atributos
-    public Capitulo(String nome, String texto, String opçoes, Personagem alteravida, String edmessage,
+    public void setCapitulo(String nome, String texto, String opçoes, Personagem alteravida, String edmessage,
      int gop, int alteracaoEnergia){
         this.nome = nome;
         this.texto = texto;
@@ -61,7 +93,7 @@ public class Capitulo {
     }
     /*Cria método que detecta a palavra/frase que o jogador digitou
     e retorna como variável int 1 ou 2*/
-    private Capitulo escolher(){
+    protected Capitulo escolher(){
         Capitulo qual = null;
         Boolean check = false;
         while(check == false){

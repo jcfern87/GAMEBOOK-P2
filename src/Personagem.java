@@ -1,9 +1,12 @@
+import java.util.HashMap;
+import java.util.Scanner;
+
 public class Personagem {
 
     // define os atributos vida(string) e saude(int)
     private String nomechar;
     private int saude;
-    public Personagem(String nomechar, int saude){
+    public void setPersonagem(String nomechar, int saude){
         this.nomechar = nomechar;
         this.saude = saude;
     }
@@ -36,6 +39,16 @@ public class Personagem {
             }
         }     
         return saude;    
+    }
+    public void lerPersonagem(HashMap<String, Personagem> personagens,
+                              String linhaEscaneada, Personagem personagem, 
+                              Scanner escaneadorArquivoPersonagens){
+        linhaEscaneada = escaneadorArquivoPersonagens.nextLine();//NOME
+        String nomePerso = escaneadorArquivoPersonagens.nextLine();
+        linhaEscaneada = escaneadorArquivoPersonagens.nextLine();//VIDA
+        int vidaPerso = Integer.parseInt(escaneadorArquivoPersonagens.nextLine());
+        personagem.setPersonagem(nomePerso, vidaPerso); 
+        personagens.put(nomePerso, personagem);
     }
 
 }

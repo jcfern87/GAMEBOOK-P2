@@ -1,18 +1,26 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class CapituloImagem extends Capitulo{
     
-    public CapituloImagem(String imagem, String nome, String texto, String opçoes, Personagem alteravida, String edmessage, int gop,
-            int alteracaoEnergia)
-    {
-        super(nome, texto, opçoes, alteravida, edmessage, gop, alteracaoEnergia);
-        this.imagem = imagem;
-        
-    }
     private String imagem; 
     private Scanner escane = new Scanner(System.in);
     private ArrayList<Escolha> escolhas;
+    public CapituloImagem(HashMap<String, Capitulo> capitulos,
+                                  HashMap<String, Personagem> personagens,
+                                  Scanner escaneadorArquivoCapitulos)
+    {                
+        super(capitulos, personagens, escaneadorArquivoCapitulos);
+        String imagemCapitulo = lerImg(escaneadorArquivoCapitulos);
+        setImagem(imagemCapitulo);
+    }
+    public void setImagem(String imagem){
+        this.imagem = imagem;
+    }
+    public String getCapituloImagem(){
+        return this.nome;
+    }
     public void setEsc()
     {
         escolhas = new ArrayList<>();  
@@ -26,6 +34,20 @@ public class CapituloImagem extends Capitulo{
         System.out.println(imagem);
         System.out.println();
         super.mostrar();
+    }
+    //Lê uma imagem num txt
+    protected String lerImg(Scanner escaneadorArquivoCapitulos)
+    {
+                String imagem = "";
+                String linha = escaneadorArquivoCapitulos.nextLine();
+                while(!linha.equals("IMG_END")){
+                    linha = escaneadorArquivoCapitulos.nextLine();
+                    if(!linha.equals("IMG_END")){
+                        linha += "\n";
+                        imagem += linha;
+                    } 
+                }
+                return imagem;
     }
     /*Cria método que detecta a palavra/frase que o jogador digitou
     e retorna como variável int 1 ou 2*/
@@ -43,7 +65,6 @@ public class CapituloImagem extends Capitulo{
             else{System.out.println("Eu não sei como '"+ resposta +"'.");}}
         return qual;
     }
-    
     //Método principal que executa o código
     public void executar(){
         mostrar();
