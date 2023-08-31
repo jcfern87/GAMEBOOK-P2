@@ -32,14 +32,6 @@ public class Capitulo {
         int gopCapitulo = Integer.parseInt(escaneadorArquivoCapitulos.nextLine());
         escaneadorArquivoCapitulos.nextLine();//ALTERA ENERGIA
         int alteraEnergiaCapitulo = Integer.parseInt(escaneadorArquivoCapitulos.nextLine());
-        if(edMessageCapitulo.equals("null"))
-        {
-            edMessageCapitulo = null;
-        }
-        if(opçoesCapitulo.equals("null"))
-        {
-            opçoesCapitulo = null;
-        }
         setCapitulo(nomeCapitulo, textoCapitulo, opçoesCapitulo,
          personagens.get(personagemCapitulo), edMessageCapitulo, gopCapitulo,
          alteraEnergiaCapitulo);
@@ -59,6 +51,9 @@ public class Capitulo {
     public String getOpcoes()
     {
         return this.opçoes;
+    }
+    public String getImg(){
+        return null;
     }
     //Define o capitulo e todos os atributos
     public void setCapitulo(String nome, String texto, String opçoes, Personagem alteravida,

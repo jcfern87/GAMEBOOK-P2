@@ -4,7 +4,7 @@ CAPÍTULO 1~~~~~~~~~~~~~~~~~~
 TEXTO:
 Era uma noite fria e escura. A lua majestosamente reluzia, e as terras embaixo resplandeciam. Um rapaz de nome Derek corria o mais rápido que podia enquanto seus pés afundavam na neve espessa. Ele usava uma roupa alaranjada, e não tinha quaisquer tipo de calçados. Sua respiração estava ofegante. 'Tenho que fugir, tenho que fugir...' Repetidamente dizia isso para si mesmo. Não muito longe dali ecoavam sirenes, e podia se ver luzes. Vindo de grandes holofotes, as luzes procuravam por algo, e inúmeros indivíduos de roupa azul escuro corriam com lanternas.Era uma prisão, e nosso protagonista havia fugido. Após certo tempo correndo como se não houvesse amanhã, o rapaz eventualmente chega em uma floresta escura, repleta de árvores que dificultavam o uso de holofotes. Antes de conseguir se apoiar em um tronco, o homem desmaia, e cai de cara na neve fofa. Antes de apagar, ele consegue ver as pernas de alguém, parecia um lenhador. Passado algumas horas, nosso protagonista acorda. Enquanto lentamente recompõe os sentidos, Derek sente um pequeno calor na sua frente. Um tipo de calor confortante. Ao abrir os olhos, Derek percebe que é uma vela. Uma vela que foi recentemente acendida. Uma voz ressoa a sala escura, pois a vela era a única fonte de luz. 'Finalmente acordou.' É uma voz áspera, certamente vinda de um velho. 'Não tinha certeza de se estava vivo, então te trouxe aqui.' Sua aparência era assustadora. Sua boca tinha todos os dentes à mostra, mas nenhum parecia real. Suas pupilas pareciam as de um gato, e sua pele era enrugada, quase esquelética. 'Eu ouvi barulhos vindo do oeste, não muito longe daqui. Um prisioneiro deve ter escapado da penitenciária.' A sua dicção era quase perfeita. Velho: 'Quem é você?' O homem pondera por uns momentos sobre se deveria revelar sua identidade para o velho que 'lhe-resgatou' ou se finge ser outro alguém. Eventualmente decide mentir. 'Sou um viajante que estava passando, acabei me perdendo da trilha e desmaiei por conta da sede.' O idoso não demonstra nenhuma mudança de humor, e apenas continua julgando o rapaz, silenciosamente. Subitamente, o velho pega um garfo que estava na mesa em que ambos estavam sentados e o usa para perfurar o braço de Derek. Ele agoniza e grita por alguns segundos, e tenta colocar a mão na região perfurada, mas não consegue pois seu outro braço está amarrado no braço da cadeira. Sentia muita dor. 'Dói, não é? Não gosto de mentirosos. O velho diz. Em seguida, ele coloca a mão no mesmo garfo, e começa a mexê-lo, provocando ainda mais dor. Derek começa a gemer entre dentes, com o corpo tremendo. 'Diga. O. Seu. Nome.' Derek decide dizer que era um fugitivo. O velho sorri. 'Finalmente, um pouco de honestidade.' Ele retira o garfo do braço de Derek e o coloca de volta na mesa, junto com um prato e uma faca também ensaguentada. 'Não tem problema nenhum em ser um fugitivo, todos nós fizemos algo de errado alguma vez.' O velho sorri novamente. 'Me chamo Morris, espero que se sinta em casa.' Ele fala, enquanto desamarra o braço de Derek. O rapaz, ainda sentindo dor, olha para o lado, e vê uma janela. Escura, mas uma possível saída.
 OPÇOES:
-1. Digite 'janela' se quiser tentar fugir pela janela. --- 2. Digite 'continue sentado' se não quiser tentar nada.
+Escolha 'janela' se quiser tentar fugir pela janela, ou 'continue sentado' se não quiser tentar nada.
 PERSONAGEM:
 Derek
 EDMESSAGE:
@@ -53,7 +53,7 @@ CAPÍTULO 2~~~~~~~~~~~~~~~~~~
 TEXTO:
 Após muitas considerações, Derek decide não fazer nada e espera Morris continuar. 'Bom', disse o velho. 'Fico feliz em ver que você permaneceu calmo'. 'Não recebo muitas visitas, então foi uma surpresa ver você inconsciente na floresta assim'. 'Isso me deixou muito feliz.' Ele então se levanta e caminha até o que parecia ser uma geladeira, mas não tinha potência e não acendeu, então era mais parecido com uma prateleira cara. Dali ele puxa uma espécie de bolo de aniversário e o traz para a mesa. Havia 5 velas apagadas no topo e parecia feito em casa. Ele estendeu a mão para o outro lado da mesa e pega um isqueiro. Quando todas as velas foram acesas, ele sorriu. Ele começou a bater palmas e cantar 'Parabéns para mim', pedindo que Derek fizesse o mesmo. As luzes das velas ajudam o rapaz a ver mais da sala, que revelou uma porta de madeira à sua esquerda. Não tinha certeza se estava destrancado, mas podia ver a chave na fechadura.
 OPÇOES:
-1. Digite 'cantar' para cantar e bater palmas junto com o homem. --- 2. Digite 'porta' para tentar correr para a porta.
+Escolha 'cantar' para cantar e bater palmas junto com o homem, ou 'porta' para tentar correr para a porta.
 PERSONAGEM:
 Derek
 EDMESSAGE:
@@ -108,16 +108,16 @@ ESCOLHA
 ORIGEM:
 CAPÍTULO 1~~~~~~~~~~~~~~~~~~
 TEXTO:
-continue sentado
+janela
 PRÓXIMO:
-CAPÍTULO 2~~~~~~~~~~~~~~~~~~
+ENDING 1 - ARMADILHA DE URSO~~~~~~~~~~~~~~~~
 ESCOLHA
 ORIGEM:
 CAPÍTULO 1~~~~~~~~~~~~~~~~~~
 TEXTO:
-janela
+continue sentado
 PRÓXIMO:
-ENDING 1 - ARMADILHA DE URSO~~~~~~~~~~~~~~~~
+CAPÍTULO 2~~~~~~~~~~~~~~~~~~
 ESCOLHA
 ORIGEM:
 CAPÍTULO 2~~~~~~~~~~~~~~~~~~

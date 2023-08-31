@@ -6,9 +6,8 @@ import javafx.stage.Stage;
 
 public class Historia extends Application {
     public static void main(String[] args) throws Exception {
-        //Inicia a história e organiza os capítulos
         launch(args);
-        //raiz.executar();
+        
     }
 
     @Override
