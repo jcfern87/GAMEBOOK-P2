@@ -21,6 +21,9 @@ public class CapituloImagem extends Capitulo{
     public String getCapituloImagem(){
         return this.nome;
     }
+    public String getText(){
+        return super.getText();
+    }
     public void setEsc()
     {
         escolhas = new ArrayList<>();  

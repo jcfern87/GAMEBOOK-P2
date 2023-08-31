@@ -9,10 +9,10 @@ PERSONAGEM:
 Derek
 EDMESSAGE:
 null
-ALTERA ENERGIA:
-25
 GANHA OU PERDE:
 2
+ALTERA ENERGIA:
+25
 IMG
     ...        *                        *       *
       ...   *         * ..   ...                        *
@@ -43,10 +43,10 @@ PERSONAGEM:
 Derek
 EDMESSAGE:
 FIM DE JOGO. Você conseguiu o final 1!
-ALTERA ENERGIA:
-25
 GANHA OU PERDE:
 2
+ALTERA ENERGIA:
+25
 CAPITULO_IMAGEM
 NOME: 
 CAPÍTULO 2~~~~~~~~~~~~~~~~~~
@@ -58,9 +58,9 @@ PERSONAGEM:
 Derek
 EDMESSAGE:
 null
-ALTERA ENERGIA:
-0
 GANHA OU PERDE:
+0
+ALTERA ENERGIA:
 0
 IMG 
        _
@@ -85,10 +85,10 @@ PERSONAGEM:
 Derek
 EDMESSAGE:
 FIM DE JOGO. Você conseguiu o final 2!
-ALTERA ENERGIA:
-25
 GANHA OU PERDE:
 2
+ALTERA ENERGIA:
+25
 CAPITULO
 NOME: 
 ENDING 3 - VITÓRIA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -100,10 +100,10 @@ PERSONAGEM:
 Morris
 EDMESSAGE:
 FIM DE JOGO. Você conseguiu o final 3(verdadeiro)!
-ALTERA ENERGIA:
-40
 GANHA OU PERDE:
 2
+ALTERA ENERGIA:
+40
 ESCOLHA
 ORIGEM:
 CAPÍTULO 1~~~~~~~~~~~~~~~~~~

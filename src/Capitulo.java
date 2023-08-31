@@ -28,10 +28,10 @@ public class Capitulo {
         String personagemCapitulo = escaneadorArquivoCapitulos.nextLine();
         escaneadorArquivoCapitulos.nextLine();//EDMESSAGE
         String edMessageCapitulo = escaneadorArquivoCapitulos.nextLine();
-        escaneadorArquivoCapitulos.nextLine();//ALTERA ENERGIA 
-        int alteraEnergiaCapitulo = Integer.parseInt(escaneadorArquivoCapitulos.nextLine());
-        escaneadorArquivoCapitulos.nextLine();//GANHA OU PERDE
+        escaneadorArquivoCapitulos.nextLine();//GANHA OU PERDE 
         int gopCapitulo = Integer.parseInt(escaneadorArquivoCapitulos.nextLine());
+        escaneadorArquivoCapitulos.nextLine();//ALTERA ENERGIA
+        int alteraEnergiaCapitulo = Integer.parseInt(escaneadorArquivoCapitulos.nextLine());
         if(edMessageCapitulo.equals("null"))
         {
             edMessageCapitulo = null;
@@ -40,15 +40,29 @@ public class Capitulo {
         {
             opçoesCapitulo = null;
         }
-        setCapitulo(nomeCapitulo, textoCapitulo, opçoesCapitulo, personagens.get(personagemCapitulo),
-                    edMessageCapitulo, alteraEnergiaCapitulo, gopCapitulo);
+        setCapitulo(nomeCapitulo, textoCapitulo, opçoesCapitulo,
+         personagens.get(personagemCapitulo), edMessageCapitulo, gopCapitulo,
+         alteraEnergiaCapitulo);
     }
     public String getCapitulo(){
         return this.nome;
     }
+    public String getText(){
+        return this.texto;
+    }
+    public String getEdMessage(){
+        return this.edmessage;
+    }
+    public int getalteracaoEnergia(){
+        return this.alteracaoEnergia;
+    }
+    public String getOpcoes()
+    {
+        return this.opçoes;
+    }
     //Define o capitulo e todos os atributos
-    public void setCapitulo(String nome, String texto, String opçoes, Personagem alteravida, String edmessage,
-     int gop, int alteracaoEnergia){
+    public void setCapitulo(String nome, String texto, String opçoes, Personagem alteravida,
+     String edmessage, int gop, int alteracaoEnergia){
         this.nome = nome;
         this.texto = texto;
         this.opçoes = opçoes;
@@ -67,9 +81,11 @@ public class Capitulo {
         return escolhas; 
     }
     //Método que altera a vida de um personagem
-    private void persoVida()
+    public String persoVida()
     {
-        alteravida.alterarSaude(gop, alteracaoEnergia);
+        String perdeuOuGanhou = alteravida.alterarSaude(gop, alteracaoEnergia);
+
+        return perdeuOuGanhou;
     }
     //Cria método para mostrar todas as Strings e altera a energia de um ou mais personagens
     protected void mostrar(){
