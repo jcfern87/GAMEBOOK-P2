@@ -34,12 +34,6 @@ public class CapituloImagem extends Capitulo{
     public String getImg(){
         return this.imagem;
     }
-    //Cria método para mostrar todas as Strings e altera a energia de um ou mais personagens
-    protected void mostrar(){
-        System.out.println(imagem);
-        System.out.println();
-        super.mostrar();
-    }
     //Lê uma imagem num txt
     protected String lerImg(Scanner escaneadorArquivoCapitulos)
     {

@@ -7,9 +7,7 @@ import javafx.stage.Stage;
 public class Historia extends Application {
     public static void main(String[] args) throws Exception {
         launch(args);
-        
     }
-
     @Override
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader FXMLLoader = new FXMLLoader(getClass().getResource("layout.fxml"));

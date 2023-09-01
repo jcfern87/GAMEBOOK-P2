@@ -3,8 +3,6 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class Capitulo {
-    //Cria uma scanner
-    protected Scanner escane = new Scanner(System.in);
     //Define os atributos String Nome, Texto, Opções, Array de Escolhas e String edmessage
     protected String nome;
     protected String texto;
@@ -81,48 +79,5 @@ public class Capitulo {
         String perdeuOuGanhou = alteravida.alterarSaude(gop, alteracaoEnergia);
 
         return perdeuOuGanhou;
-    }
-    //Cria método para mostrar todas as Strings e altera a energia de um ou mais personagens
-    protected void mostrar(){
-        System.out.println();
-        System.out.println(nome);
-        System.out.println();
-        System.out.println(texto);
-        System.out.println();
-        if(alteracaoEnergia != 0){
-            persoVida();
-            System.out.println();
-        }
-        if(opçoes != null){
-            System.out.println(opçoes);
-            System.out.println();
-        }
-        if(edmessage != null){
-            System.out.println(edmessage);
-            System.out.println();
-        }    
-    }
-    /*Cria método que detecta a palavra/frase que o jogador digitou
-    e retorna como variável int 1 ou 2*/
-    protected Capitulo escolher(){
-        Capitulo qual = null;
-        Boolean check = false;
-        while(check == false){
-            String resposta = escane.nextLine(); 
-            if(resposta.equalsIgnoreCase(escolhas.get(0).getTextoEsc())){
-                check = true;
-                qual = escolhas.get(0).getProximoEsc();}    
-            else if(resposta.equalsIgnoreCase(escolhas.get(1).getTextoEsc())){
-                check = true;
-                qual = escolhas.get(1).getProximoEsc();}
-            else{System.out.println("Eu não sei como '"+ resposta +"'.");}}
-        return qual;
-    }
-    //Método principal que executa o código
-    public void executar(){
-        mostrar();
-        if(opçoes != null){
-            Capitulo x = escolher();
-            x.executar();}
     }
 }
